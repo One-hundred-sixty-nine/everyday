@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>수강 신청</title>
+</head>
+<body>
+    <header>
+        <h1>수강 신청서</h1>
+    </header>
+    <hr>
+    <form action="https://httpbin.org/post" method="post">
+        <main>
+            <h2>본인 정보</h2>
+            <section>
+                <article>
+                    <label for="name">이름</label>
+                    <br>
+                    <input type="text" id="name" name="name" placeholder="홍길동" required>
+                    <br>
+                    <br>
+                    <label for="email">이메일</label>
+                    <br>
+                    <input type="email" id="email" name="email" placeholder="name@email.com" required>
+                    <br>
+                    <br>
+                    <label for="password">비밀번호</label>
+                    <br>
+                    <input type="password" id="password" name="password" placeholder="1234">
+                </article>
+            </section>
+            <hr>
+            <section>
+                <h2>학년 및 분야 선택</h2>
+                <article>
+                    <fieldset>
+                        <legend>학년</legend>
+                        <input type="radio" id="year1" name="year" value="1">
+                        <label for="year1">1학년</label>
+                        <input type="radio" id="year2" name="year" value="2">
+                        <label for="year2">2학년</label>
+                        <input type="radio" id="year3" name="year" value="3">
+                        <label for="year3">3학년</label>
+                        <input type="radio" id="year4" name="year" value="4">
+                        <label for="year4">4학년</label>
+                    </fieldset>
+                    <br>
+                    <fieldset>
+                        <legend>관심 분야</legend>
+                        <input type="checkbox" id="pe" name="pe" value="pe">
+                        <label for="pe">프론트엔드</label>
+                        <input type="checkbox" id="be" name="be" value="be">
+                        <label for="be">백엔드</label>
+                        <input type="checkbox" id="db" name="db" value="db">
+                        <label for="db">DB</label>
+                    </fieldset>
+                </article>
+            </section>
+            <hr>
+            <section>
+                <h2>신청 과목 및 희망 시작일 선택</h2>
+                <article>
+                    <p>
+                        <label for="cs">신청 과목</label>
+                        <br>
+                        <select id="cs" name="cs">
+                            <option value="CS101">웹 프로그래밍 기초</option>
+                            <option value="CS102">자바 입문</option>
+                            <option value="DB201">데이터 베이스</option>
+                            <option value="CS103">알고리즘 기초</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="ss">희망 시작일</label>
+                        <br>
+                        <input type="date" id="ss" name="ss">
+                    </p>
+                </article>
+            </section>
+            <hr>
+            <aside>
+                <label for="mt"><h3>하고 싶은 말</h3></label>
+                <textarea id="mt" name="message"></textarea>
+            </aside>
+        </main>
+        <br>
+        <button type="submit">신청</button>
+        <button type="reset">다시 쓰기</button>
+    </form>
+</body>
+</html>
